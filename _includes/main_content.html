@@ -1,6 +1,8 @@
+<!-- Detect content only for categories. -->
 {% if page.categories %}
 
-{% if page.media_url contains '.jpg' %}
+<!-- Is it page? -->
+{% if page.media_url contains '.jpg' or page.media_url contains '.jpeg' or page.media_url contains '.png' or page.media_url contains '.gif' %}
 
 <div>
     <div class="media">
@@ -10,6 +12,7 @@
     </div>
 </div>
 
+<!-- Assume video url. -->
 {% else %}
 
 <div>
