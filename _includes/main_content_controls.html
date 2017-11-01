@@ -12,7 +12,9 @@
         {% if page.categories == page.next.categories %}
         <a id="next" href="{{ page.next.url }}">&gt;</a>
         {% else %}
-        <a id="prev" href="{{ first_url }}">&gt;</a>
+        <a id="next" href="{{ first_url }}">&gt;</a>
         {% endif %}
     {% endif %}
 </div>
+
+<script src="/assets/js/content_controls.js"></script>

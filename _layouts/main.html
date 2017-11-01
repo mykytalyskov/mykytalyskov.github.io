@@ -10,6 +10,8 @@
   {% include main_styles.html %}
   
   {% seo %}
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico"/>
 </head>
 <body>
 
@@ -21,13 +23,15 @@
       {% include main_content_controls.html %}
       <div id="content">
         <div>
-          {{ content }}
+          {% include main_content.html %}
         </div>
         {% include disqus.html %}
       </div>
   </div>
   
 </div>
+
+<script src="/assets/js/common.js"></script>
 
 <!-- Google analytics -->
 {% include analytics.html %}

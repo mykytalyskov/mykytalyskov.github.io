@@ -1,0 +1,36 @@
+{% if page.categories %}
+
+{% if page.media_url contains '.jpg' %}
+
+<div>
+    <div class="media">
+        <a href="javascript:window.contentControls.next()">
+            <img src="{{ page.media_url }}"/>
+        </a>
+    </div>
+</div>
+
+{% else %}
+
+<div>
+	<div class="media">
+         <iframe src="{{ page.media_url }}" width="500" height="281" frameborder="0" allowfullscreen=""></iframe>
+    </div>
+    <div class="text">
+        <div>
+            <strong>
+                {{ page.title }}
+            </strong>
+        </div>
+        <pre>{{ page.description }}</pre>
+    </div>
+</div>
+
+{% endif %}
+
+{% else %}
+
+{{ content }}
+
+{% endif %}
+

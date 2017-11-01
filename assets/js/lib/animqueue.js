@@ -1,4 +1,3 @@
-console.log('animqueue');
 $.animQueue = function(queue, options){
     var defaults = {
         loop: false
