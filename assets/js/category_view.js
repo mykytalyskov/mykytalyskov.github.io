@@ -12,19 +12,25 @@ function CategoryView(el) {
 	var submenuPattern = 'ul.nav';
 	this.$submenu = this.$el.find(submenuPattern); // <ul>
 
-	this.doClick = function(e) {
-		//console.log('doClick');
+	this.doClick = function() {
 		this.doAnimate(_.bind(this.selectFirstAnchor, this));
 	}
 
     this.$el.on('click', _.bind(this.doClick, this));
+    // disable bubbling for internal events
+    this.$submenu.on('click', function(e){e.stopPropagation()});
 
     this.selectFirstAnchor = function() {
 	    // menu already opened. imitate click on first submenu item
         if (this.$submenu.length && this.$el.hasClass('active')) {
-        	this.$submenu.find('li:first').toggleClass('active');
+        	var $item = this.$submenu.find('li:first');
 
-            var firstAnchor = this.$submenu.find('a:first')[0];
+        	if (!$item.data('selectable')) // skip external links
+        		return;
+
+        	$item.toggleClass('active');
+
+            var firstAnchor = $item.find('a')[0];
             firstAnchor && firstAnchor.click();
         }
     }

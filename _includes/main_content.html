@@ -1,6 +1,3 @@
-<!-- Detect content only for categories. -->
-{% if page.categories %}
-
 <!-- Is it page? -->
 {% if page.media_url contains '.jpg' or page.media_url contains '.jpeg' or page.media_url contains '.png' or page.media_url contains '.gif' %}
 
@@ -13,8 +10,7 @@
 </div>
 
 <!-- Assume video url. -->
-{% else %}
-
+{% elsif page.media_url %}
 <div>
 	<div class="media">
          <iframe src="{{ page.media_url }}" width="500" height="281" frameborder="0" allowfullscreen=""></iframe>
@@ -29,11 +25,9 @@
     </div>
 </div>
 
-{% endif %}
-
+<!-- Regular page -->
 {% else %}
 
 {{ content }}
 
 {% endif %}
-

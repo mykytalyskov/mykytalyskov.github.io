@@ -131,8 +131,10 @@ body {
 
 /* CALENDAR STYLE */
 
+/* add 'float: left' to get rid of extra space between inline-block items */
 .bs-docs-sidebar ul li.calendar ul li {
     min-width: 2em;
+    float: left;
 }
 
 .bs-docs-sidebar ul li.calendar ul li,

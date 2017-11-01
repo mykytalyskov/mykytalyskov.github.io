@@ -25,11 +25,18 @@
             {% assign class = '' %}
         {% endif %}
 
-        <!-- to mark the link set class to 'active' -->
-        <!-- add 'float: left' to get rid of extra space between inline-block items  -->
-        <li class="{{ class }}" style="float: left">
-	        <a id="{{ j }}" href="{{ post.url }}"><span>{{ post.title }}</span></a>
-    	</li>
+        {% if post.external_url %}
+            <!-- to mark the link set class to 'active' -->
+            <!-- add 'float: left' to get rid of extra space between inline-block items  -->
+            <li class="{{ class }}" style="">
+                <a id="{{ j }}" href="{{ post.external_url }}" target="blank"><span>{{ post.title | downcase }}</span></a>
+            </li>
+        {% else %}
+            <!-- to mark the link set class to 'active' -->
+            <li class="{{ class }}" style="" data-selectable="true">
+                <a id="{{ j }}" href="{{ post.url }}"><span>{{ post.title }}</span></a>
+            </li>
+        {% endif %}
 		
         {% endfor %}
 	</ul>
