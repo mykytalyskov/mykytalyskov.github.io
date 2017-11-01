@@ -3,14 +3,16 @@
     {% assign cat = page.categories[0] %}
     {% assign first_url = site.categories[cat].last.url %}
     {% assign last_url = site.categories[cat].first.url %}
-    {% if page.categories == page.previous.categories %}
-    <a id="prev" href="{{ page.previous.url }}">&lt;</a>
-    {% else %}
-    <a id="prev" href="{{ last_url }}">&lt;</a>
-    {% endif %}
-    {% if page.categories == page.next.categories %}
-    <a id="next" href="{{ page.next.url }}">&gt;</a>
-    {% else %}
-    <a id="prev" href="{{ first_url }}">&gt;</a>
+    {% if page.categories %}
+        {% if page.categories == page.previous.categories %}
+        <a id="prev" href="{{ page.previous.url }}">&lt;</a>
+        {% else %}
+        <a id="prev" href="{{ last_url }}">&lt;</a>
+        {% endif %}
+        {% if page.categories == page.next.categories %}
+        <a id="next" href="{{ page.next.url }}">&gt;</a>
+        {% else %}
+        <a id="prev" href="{{ first_url }}">&gt;</a>
+        {% endif %}
     {% endif %}
 </div>
