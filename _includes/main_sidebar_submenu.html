@@ -25,9 +25,9 @@
             {% assign class = '' %}
         {% endif %}
 
-        <!-- to mart the link set class to 'active' -->
-        <li class="{{ class }}">
-	        <!-- IE fix: open new tab when using anhor with blank attribute -->
+        <!-- to mark the link set class to 'active' -->
+        <!-- add 'float: left' to get rid of extra space between inline-block items  -->
+        <li class="{{ class }}" style="float: left">
 	        <a id="{{ j }}" href="{{ post.url }}"><span>{{ post.title }}</span></a>
     	</li>
 		
