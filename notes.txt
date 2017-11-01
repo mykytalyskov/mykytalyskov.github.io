@@ -1,3 +1,8 @@
+liquid cheatsheet:
+https://gist.github.com/smutnyleszek/9803727
+
+//////////////////////
+
 https://www.sigmainfy.com/blog/how-to-add-jekyll-pagination-next-previous-post-link.html
 
 ///////////////////////
