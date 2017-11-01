@@ -1,10 +1,17 @@
 function CategoryViewWrapper() {
 	this.items = [];
+	
 	$('.bs-docs-sidebar ul:first-child > li').each(_.bind(function(n, el) {
 		var view = new CategoryView(el);
 		view.menu = this;
 		this.items.push(view);
 	}, this));
+
+	this.openFirstCategory = function() {
+		var firstCategory = this.items[1];
+		// actually this isn't first category because fisrt is the top banner
+		firstCategory && firstCategory.doClick();
+	}
 }
 
 function CategoryView(el) {
