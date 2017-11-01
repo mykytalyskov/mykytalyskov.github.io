@@ -1,0 +1,25 @@
+https://www.sigmainfy.com/blog/how-to-add-jekyll-pagination-next-previous-post-link.html
+
+///////////////////////
+
+https://stackoverflow.com/questions/27099427/jekyll-filename-without-date
+https://jekyllrb.com/docs/collections/
+
+/////////////////////
+
+Counters:
+{% assign j = 0 %}
+...
+{% assign j = j | plus: 1 %}
+
+////////////////////
+
+https://jekyllrb.com/docs/static-files/
+
+{% for image in site.static_files %}
+    {% if image.path contains 'images/slider' %}
+        <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+    {% endif %}
+{% endfor %}
+
+///////////////////

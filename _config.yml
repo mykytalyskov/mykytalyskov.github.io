@@ -1,0 +1,42 @@
+baseurl: 
+baseTitle: Mykyta Lyskov
+sdkurl: https://developer.android.com/reference
+excerpt_separator: <!--more-->
+themename: 'theme-my'
+title: Mykyta Lyskov's Home Site
+description: Comfortable YouTube client for Android TV boxes
+url: https://yuliskov.github.io
+author: Yurii Lyskov
+logo: /images/site_logo.png
+email: firsthash@gmail.com
+exclude:
+  - old
+  - bak
+lang:
+  - en
+  - ru
+binaries:
+  unified: https://github.com/yuliskov/SmartYouTubeTV/releases/download/6.8.59/SmartYouTubeTV_Orig_v6.8.59_r.apk
+  origin: https://github.com/yuliskov/SmartYouTubeTV/releases/download/6.8.37/SmartYouTubeTV_Original_v6.8.37_r.apk
+  beta: https://github.com/yuliskov/SmartYouTubeTV/releases/download/6.8.37/SmartYouTubeTV_Xwalk_v6.8.37_r.apk
+  4k: https://github.com/yuliskov/SmartYouTubeTV/releases/download/6.8.37/SmartYouTubeTV_Exoplayer_v6.8.37_r.apk
+  MiTV2: https://github.com/yuliskov/SmartYouTubeTV/releases/download/6.8.6/SmartYouTubeTV_autoapk_s_2.apk
+  Mystery: https://github.com/yuliskov/SmartYouTubeTV/releases/download/6.8.6/smartyoutubetv-betaFlavor-debug-Mystery.apk
+bottom-links:
+  -
+    url: https://github.com/yuliskov/SmartYouTubeTV/releases/
+    title: All Releases
+  -
+    url: https://github.com/yuliskov/SmartYouTubeTV
+    title: Source Code
+gems:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+permalink: /:categories/:title
+collections:
+  animation:
+    output: true
+    permalink: /:collection/:name
+  pictures:
+    output: true
+    permalink: /:collection/:name

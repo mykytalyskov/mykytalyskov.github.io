@@ -1,0 +1,36 @@
+<!-- another loop to find out is this top item active -->
+{% assign class = '' %}
+{% for post in site.categories[category_name] %}
+    {% if page.url == post.url %}
+        {% assign class = 'active' %}
+        {% break %}
+    {% endif %}
+{% endfor %}
+
+<!-- to open category set class to 'active' -->
+<li class="{{ class }} {{ additional_class }}">
+	<!-- IE fix: open new tab when using anhor with blank attribute -->
+	{% assign j = j | plus: 1 %}
+    <a id="{{ j }}" href="javascript:"><span>{{ category_name }}</span></a>
+    <ul class="nav" style="">
+        <!-- help: https://stackoverflow.com/questions/20872861/jekyll-display-posts-by-category -->
+        {% for post in site.categories[category_name] reversed %}
+
+    	{% assign j = j | plus: 1 %}
+
+        <!-- find out is this item active -->
+        {% if page.url == post.url %}
+            {% assign class = 'active' %}
+        {% else %}
+            {% assign class = '' %}
+        {% endif %}
+
+        <!-- to mart the link set class to 'active' -->
+        <li class="{{ class }}">
+	        <!-- IE fix: open new tab when using anhor with blank attribute -->
+	        <a id="{{ j }}" href="{{ post.url }}"><span>{{ post.title }}</span></a>
+    	</li>
+		
+        {% endfor %}
+	</ul>
+</li>

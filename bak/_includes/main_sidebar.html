@@ -1,0 +1,51 @@
+<div class="bs-docs-sidebar affix col-sm-2 col-xs-2">
+<nav>
+<div id="menu">
+{% assign j = 0 %}
+<ul class="nav">
+	<li class="">
+        <!-- IE fix: open new tab when using anhor with blank attribute -->
+        <a id="{{ j }}" href="javascript:" target="blank"><span>mykyta-lyskov</span></a>
+    
+        <div class="lang">
+			<!-- 
+			<a href="/?locale=ru"><span>ru</span></a>
+            <a href="/?locale=us"><span>en</span></a> 
+        	-->
+        </div>
+    </li>
+    <!-- help: https://stackoverflow.com/questions/20872861/jekyll-display-posts-by-category -->
+    {% for category in site.categories %}
+    <!-- to open category set class to 'active' -->
+    <li class="">
+    	<!-- IE fix: open new tab when using anhor with blank attribute -->
+    	{% assign j = j | plus: 1 %}
+        <a id="{{ j }}" href="javascript:"><span>{{ category | first }}</span></a>
+        <ul class="nav" style="">
+        	{% for posts in category %}
+
+        	<!-- first item is category name (see above) -->
+        	{% if forloop.first %}
+        		{% continue %}
+        	{% endif %}
+
+      		{% for post in posts %}
+
+        	{% assign j = j | plus: 1 %}
+	        
+	        <li class="">
+		        <!-- IE fix: open new tab when using anhor with blank attribute -->
+		        <a id="{{ j }}" href="{{ post.url }}"><span>{{ post.title }}</span></a>
+	    	</li>
+
+			{% endfor %}
+			{% endfor %}
+    	</ul>
+    </li>
+    {% endfor %}
+    </li>
+</ul>
+</div>
+<div class="nav-bottom">&nbsp;</div>
+</nav>
+</div>

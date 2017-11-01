@@ -1,0 +1,36 @@
+<!-- HELP: https://shopify.github.io/liquid/basics/types/ -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>{{ site.baseTitle }} - {{ page.title }}</title>
+  <!-- Site theme -->
+  {% assign themebaseurl = site.baseurl | append: '/' | append: site.themename %}
+
+  {% include main_styles.html %}
+  
+  {% seo %}
+</head>
+<body>
+
+{% include main_scripts.html %}
+
+<div id="container" class="container-fluid">
+  {% include main_sidebar.html %}
+  <div id="content-wrap" class="col-sm-5">
+      {% include main_content_controls.html %}
+      <div id="content">
+        <div>
+          {{ content }}
+        </div>
+        {% include disqus.html %}
+      </div>
+  </div>
+  
+</div>
+
+<!-- Google analytics -->
+{% include analytics.html %}
+
+</body>
+</html>
