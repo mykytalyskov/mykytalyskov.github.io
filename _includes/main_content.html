@@ -13,19 +13,19 @@
 {% elsif page.media_url %}
 <div>
 	<div class="media">
-         <iframe src="{{ page.media_url }}" width="500" height="281" frameborder="0" allowfullscreen=""></iframe>
-    </div>
-    <div class="text">
-        <div>
-            <strong>
-                {% if page.title_full %}
-                {{ page.title_full }}
-                {% else %}
-                {{ page.title }}
-                {% endif %}
-            </strong>
+        <iframe src="{{ page.media_url }}" width="500" height="281" frameborder="0" allowfullscreen=""></iframe>
+        <div class="text">
+            <div>
+                <strong>
+                    {% if page.title_full %}
+                    {{ page.title_full }}
+                    {% else %}
+                    {{ page.title }}
+                    {% endif %}
+                </strong>
+            </div>
+            <pre>{{ page.description }}</pre>
         </div>
-        <pre>{{ page.description }}</pre>
     </div>
 </div>
 
