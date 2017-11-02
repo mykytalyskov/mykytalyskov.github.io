@@ -16,4 +16,19 @@ and (min-resolution: 190dpi) {
     width: 25em;
     max-width: 100%;
   }
+
+  .bs-docs-sidebar ul li.calendar ul li {
+    min-width: 4em;
+    min-height: 4em;
+  }
+
+  /* dashed background on main menu */
+  .bs-docs-sidebar ul:first-child > li, .nav-bottom {
+      background-size: 2em 3em;
+      min-height: 2em;
+  }
+
+  #content-controls {
+    font-size: xx-large;
+  }
 }
