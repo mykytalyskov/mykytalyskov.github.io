@@ -1,0 +1,14 @@
+/* Tweaks for small-sreen devices like smartphones */
+
+/* Minimum resolution */
+@media only screen
+and (min-resolution: 190dpi) {
+  span {
+    font-size: 1.5em;
+  }
+
+  #content .media img, #content .media iframe {
+	max-width: 100%;
+	max-height: 100%;
+  }
+}

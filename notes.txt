@@ -1,3 +1,56 @@
+<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+///////////////
+
+@media only screen 
+and (min-width: 360px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 3.0) {
+  span {
+    font-size: 1.5em;
+  }
+}
+
+<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+///////////////
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/@media/resolution
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 2) { /* STYLES GO HERE */ }
+
+/* Exact resolution */
+@media (resolution: 150dpi) {
+  p {
+    color: red;
+  }
+}
+
+/* Minimum resolution */
+@media (min-resolution: 72dpi) {
+  p {
+    font-size: 1.5em;
+  }
+}
+
+/* Maximum resolution */
+@media (max-resolution: 300dpi) {
+  p {
+    background: yellow;
+  }
+}
+
+/////////////
+
+http://dpi.lv/
+
+///////////////////////
+
 liquid cheatsheet:
 https://gist.github.com/smutnyleszek/9803727
 

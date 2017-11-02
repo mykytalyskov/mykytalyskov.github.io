@@ -15,11 +15,9 @@
 </head>
 <body>
 
-{% include main_scripts.html %}
-
 <div id="container" class="container-fluid">
   {% include main_sidebar.html %}
-  <div id="content-wrap" class="col-sm-5">
+  <div id="content-wrap" class="col-5">
       {% include main_content_controls.html %}
       <div id="content">
         <div>
@@ -31,10 +29,17 @@
   
 </div>
 
-<script src="/assets/js/common.js"></script>
+{% include main_scripts.html %}
 
 <!-- Google analytics -->
 {% include analytics.html %}
+
+{% if page.start_event %}
+  <!-- select first item from list -->
+  <script type="text/javascript">
+    $('body').trigger('{{ page.start_event }}');
+  </script>
+{% endif %}
 
 </body>
 </html>

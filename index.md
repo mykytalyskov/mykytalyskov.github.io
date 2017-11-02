@@ -1,6 +1,7 @@
 ---
 layout: main
 title: Home
+start_event: openFirstCategory
 ---
 
 <!-- select first item from list -->
