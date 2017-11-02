@@ -3,8 +3,14 @@
 /* Minimum resolution */
 @media only screen
 and (min-resolution: 190dpi) {
-  span {
+  /* most of the text on the page */
+  span, pre, strong {
     font-size: 2em;
+  }
+
+  /* arrows above the media content */
+  #content-controls {
+    font-size: xx-large;
   }
 
   #content .media img, #content .media iframe {
@@ -26,9 +32,5 @@ and (min-resolution: 190dpi) {
   .bs-docs-sidebar ul:first-child > li, .nav-bottom {
       background-size: 2em 3em;
       min-height: 2em;
-  }
-
-  #content-controls {
-    font-size: xx-large;
   }
 }
