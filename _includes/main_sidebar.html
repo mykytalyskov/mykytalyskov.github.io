@@ -8,6 +8,7 @@
         <a id="{{ j }}" href="/"><span>mykyta-lyskov</span></a>
     
         <div class="lang">
+            <!-- TODO: add more lang -->
 			<!-- 
 			<a href="/?locale=ru"><span>ru</span></a>
             <a href="/?locale=us"><span>en</span></a> 
@@ -15,19 +16,11 @@
         </div>
     </li>
 
-    <!-- TODO: move category_name to _config.yaml -->
-
-    {% assign category_name = 'animation' %}
-    {% assign additional_class = '' %}
-    {% include main_sidebar_submenu.html %}
-
-    {% assign category_name = 'pictures' %}
-    {% assign additional_class = 'calendar' %}
-    {% include main_sidebar_submenu.html %}
-
-    {% assign category_name = 'contacts' %}
-    {% assign additional_class = '' %}
-    {% include main_sidebar_submenu.html %}
+    {% for item in site.sidebar %}
+        {% assign category_name = item.category %}
+        {% assign additional_class = item.class %}
+        {% include main_sidebar_submenu.html %}
+    {% endfor %}
 </ul>
 </div>
 <div class="nav-bottom">&nbsp;</div>
