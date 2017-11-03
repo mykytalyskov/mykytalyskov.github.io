@@ -13,9 +13,11 @@ and (min-resolution: 190dpi) {
     font-size: xx-large;
   }
 
+  /* fit media horizontally */
   #content .media img, #content .media iframe {
 	max-width: 100%;
 	max-height: 100%;
+	min-width: 100%;
   }
 
   .bs-docs-sidebar.col-sm-2 {
@@ -32,5 +34,15 @@ and (min-resolution: 190dpi) {
   .bs-docs-sidebar ul:first-child > li, .nav-bottom {
       background-size: 2em 3em;
       min-height: 2em;
+  }
+}
+
+@media only screen
+and (orientation: landscape) {
+  /* fit media horizontally */
+  #content .media img, #content .media iframe {
+    max-width: 100%;
+    max-height: 40em;
+    min-width: unset;
   }
 }
