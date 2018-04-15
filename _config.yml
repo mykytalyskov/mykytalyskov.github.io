@@ -19,21 +19,30 @@ sidebar:
 exclude:
   - old
   - bak
+
 # not used
 lang:
   - en
   - ru
+
 gems:
   - jekyll-seo-tag
   - jekyll-sitemap
 permalink: /:categories/:title
-# not used
-collections:
-  animation:
-    output: true
-    permalink: /:collection/:name
-  pictures:
-    output: true
-    permalink: /:collection/:name
+
+# not working
+# configuring collection_dir is not available in 3.6.0. Its slated for v3.7.0
+# collections_dir: site2
+# collections:
+#   animation:
+#     output: true
+#     permalink: /:collection/:name
+#   pictures:
+#     output: true
+#     permalink: /:collection/:name
+
 # show future posts
 future: true
+
+# not used
+media_root: site
