@@ -1,6 +1,6 @@
 ---
 layout: main
-title: "DZ'OB - Techno 2"
+title: "DZ'OB - Techno 1"
 description: |
     Animation for live performance of DZ'OB (Dnipro)
     Animation by Nikita Liskov
