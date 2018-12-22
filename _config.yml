@@ -1,10 +1,11 @@
 # baseurl - url prefix for the site e.g. http://my.site/myprefix/
 baseurl: 
-baseTitle: M Y K Y T A&nbsp;&nbsp;&nbsp;L Y S K O V
+baseTitle: N I K I T A&nbsp;&nbsp;&nbsp;L I S K O V
 excerpt_separator: <!--more-->
-title: Mykyta Lyskov's Home Site
-description: Mykyta Lyskov's Home Site
-author: Mykyta Lyskov
+title: Nikita Liskov's Home Site
+description: Nikita Liskov's Home Site
+author: Nikita Liskov
+author_short: nikita-liskov
 logo: /pictures/logos/Head-blink.gif
 email: nikitaliskov@gmail.com
 url: http://nikitaliskov.com
