@@ -1,19 +1,20 @@
 <!-- Is it page? -->
-{% if page.media_url contains '.jpg' or page.media_url contains '.jpeg' or page.media_url contains '.png' or page.media_url contains '.gif' %}
+{% if page.media_url %}
 
 <div>
-    <div class="media">
+	<div class="media">
+        {% if page.media_url contains '.jpg' or page.media_url contains '.jpeg' or page.media_url contains '.png' or page.media_url contains '.gif' %}
+
         <a href="javascript:">
             <img src="{{ page.media_url }}" alt="picture not found"/>
         </a>
-    </div>
-</div>
 
-<!-- Assume video url. -->
-{% elsif page.media_url %}
-<div>
-	<div class="media">
+        <!-- Assume video url. -->
+        {% else %}
+
         <iframe src="{{ page.media_url }}" width="500" height="281" frameborder="0" allowfullscreen=""></iframe>
+
+        {% endif %}
         <div class="text">
             <div>
                 <strong>
