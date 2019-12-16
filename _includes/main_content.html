@@ -2,7 +2,8 @@
 {% if page.media_url %}
 
 <div>
-	<div class="media">
+    <!-- All vars: https://jekyllrb.com/docs/variables/ -->
+	<div class="media {{ page.categories }}">
         {% if page.media_url contains '.jpg' or page.media_url contains '.jpeg' or page.media_url contains '.png' or page.media_url contains '.gif' %}
 
         <a href="javascript:">

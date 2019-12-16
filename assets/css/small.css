@@ -45,4 +45,9 @@ and (orientation: landscape) {
     max-height: 40em;
     min-width: unset;
   }
+
+  /* Exclusively for There's That Grin */
+  #content .media.animation img {
+    width: 500px;
+  }
 }
