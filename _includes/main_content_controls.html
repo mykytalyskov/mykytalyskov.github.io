@@ -21,7 +21,7 @@
         {% endif %}
     {% endfor %}
 
-    {% if page.categories %}
+    {% if page.categories and site.categories[cat].size > 1 %}
         {% if prev_url != nil %}
         <a id="prev" href="{{ prev_url }}">&lt;</a>
         {% else %}

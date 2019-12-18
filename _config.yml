@@ -17,6 +17,8 @@ sidebar:
     class: calendar
   - 
     category: contacts
+  -
+    category: about
 exclude:
   - old
   - bak
