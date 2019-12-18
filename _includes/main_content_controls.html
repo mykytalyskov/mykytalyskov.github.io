@@ -1,9 +1,11 @@
 <!-- TODO: prev/next heavily depends on posts order defined in main_sidebar.html -->
 <div id="content-controls" class="">
-    <!-- Get page category. -->
+    <!-- Get page category -->
     {% assign cat = page.categories[0] %}
 
     <!-- Reversed order -->
+    <!-- Find first/last pages within the category -->
+    <!-- NOTE: Reversed order -->
     {% assign first_url = site.categories[cat].last.url %}
     {% assign last_url = site.categories[cat].first.url %}
 
