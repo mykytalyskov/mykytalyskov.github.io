@@ -1,22 +1,33 @@
+<!-- TODO: prev/next heavily depends on posts order defined in main_sidebar.html -->
 <div id="content-controls" class="">
     <!-- Get page category. -->
     {% assign cat = page.categories[0] %}
 
-    <!-- NOTE: Reversed order -->
+    <!-- Reversed order -->
     {% assign first_url = site.categories[cat].last.url %}
     {% assign last_url = site.categories[cat].first.url %}
 
+    <!-- Find next/previos pages within the category -->
+    <!-- NOTE: DON'T RELY ON page.next.url or page.previous.url -->
+    {% for post in site.categories[cat] %}
+        {% if post.url == page.url %}
+            <!-- NOTE: Reversed order -->
+            {% assign prev_index = forloop.index0 | plus: 1 %}
+            {% assign next_index = forloop.index0 | minus: 1 %}
+            {% assign prev_url = site.categories[cat][prev_index].url %}
+            {% assign next_url = site.categories[cat][next_index].url %}
+        {% endif %}
+    {% endfor %}
+
     {% if page.categories %}
-        <!-- NOTE: Reversed order -->
-        {% if page.next_in_category != nil %}
-        <a id="prev" href="{{ page.next_in_category.url }}">&lt;</a>
+        {% if prev_url != nil %}
+        <a id="prev" href="{{ prev_url }}">&lt;</a>
         {% else %}
         <a id="prev" href="{{ last_url }}">&lt;</a>
         {% endif %}
 
-        <!-- NOTE: Reversed order -->
-        {% if page.previous_in_category != nil %}
-        <a id="next" href="{{ page.previous_in_category.url }}">&gt;</a>
+        {% if next_url != nil %}
+        <a id="next" href="{{ next_url }}">&gt;</a>
         {% else %}
         <a id="next" href="{{ first_url }}">&gt;</a>
         {% endif %}
