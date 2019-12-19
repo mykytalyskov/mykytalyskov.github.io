@@ -1,41 +1,44 @@
 function CategoryViewWrapper() {
-	this.items = [];
-	
-	$('.bs-docs-sidebar ul:first-child > li').each(_.bind(function(n, el) {
-		var view = new CategoryView(el);
-		view.menu = this;
-		this.items.push(view);
-	}, this));
+    this.items = [];
+    
+    $('.bs-docs-sidebar ul:first-child > li').each(_.bind(function(n, el) {
+        var view = new CategoryView(el);
+        view.menu = this;
+        this.items.push(view);
+    }, this));
 
-	this.openFirstCategory = function() {
-		var firstCategory = this.items[1];
-		// actually this isn't first category because fisrt is the top banner
-		firstCategory && firstCategory.doClick();
-	}
+    // Open first category on boot
+    this.openFirstCategory = function() {
+        var firstCategory = this.items[1];
+        // actually this isn't first category because fisrt is the top banner
+        firstCategory && firstCategory.doClick();
+    }
 }
 
 function CategoryView(el) {
-	this.$el = $(el);
-	var submenuPattern = 'ul.nav';
-	this.$submenu = this.$el.find(submenuPattern); // <ul>
+    this.$el = $(el);
+    var submenuPattern = 'ul.nav';
+    this.$submenu = this.$el.find(submenuPattern); // <ul>
 
-	this.doClick = function() {
-		this.doAnimate(_.bind(this.selectFirstAnchor, this));
-	}
+    this.doClick = function() {
+        this.doAnimate(_.bind(this.selectFirstAnchor, this));
+    }
 
     this.$el.on('click', _.bind(this.doClick, this));
     // disable bubbling for internal events
     this.$submenu.on('click', function(e){e.stopPropagation()});
 
     this.selectFirstAnchor = function() {
-	    // menu already opened. imitate click on first submenu item
+        // menu already opened. imitate click on first submenu item
         if (this.$submenu.length && this.$el.hasClass('active')) {
-        	var $item = this.$submenu.find('li:first');
+            var $item = this.$submenu.find('li:first');
 
-        	if (!$item.data('selectable')) // skip external links
-        		return;
+            if (!$item.data('selectable')) { // skip external links
+                $('#content, #content-controls').hide(); // no content
+                return;
+            }
 
-        	$item.toggleClass('active');
+            $item.toggleClass('active');
 
             var firstAnchor = $item.find('a')[0];
             firstAnchor && firstAnchor.click();
