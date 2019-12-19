@@ -16,6 +16,8 @@
         <iframe src="{{ page.media_url }}" width="500" height="281" frameborder="0" allowfullscreen=""></iframe>
 
         {% endif %}
+
+        {% if page.description %}
         <div class="text">
             <div>
                 <strong>
@@ -28,6 +30,8 @@
             </div>
             <pre>{{ page.description }}</pre>
         </div>
+        {% endif %}
+
         {% include disqus.html %}
     </div>
 </div>
