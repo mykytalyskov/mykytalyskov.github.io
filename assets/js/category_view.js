@@ -34,7 +34,7 @@ function CategoryView(el) {
             var $item = this.$submenu.find('li:first');
 
             if (!$item.data('selectable')) { // skip external links
-                $('#content, #content-controls').hide(); // no content
+                $('#content, #content-controls').hide(); // hide right panel when there is no content
                 return;
             }
 
@@ -65,9 +65,11 @@ function CategoryView(el) {
         var queue = [
             {
                 el: el1,
+                //duration: that && that.$submenu.children().length > 1 ? 500 : 0,
             },
             {
                 el: el2,
+                //duration: this.$submenu.children().length > 1 ? 500 : 0,
             },
         ];
 
