@@ -4,6 +4,6 @@
 	var mediaWrapper = new MediaWrapper(contentControls);
 
 	// home page routine
-	$('body').on('openFirstCategory', function(){categoryViewWrapper.openFirstCategory()});
+	$('body').on('openFirstCategory', function(){categoryViewWrapper.openLastCategory()});
 })();
 
