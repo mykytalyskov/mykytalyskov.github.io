@@ -11,10 +11,14 @@ email: nikitaliskov@gmail.com
 url: http://nikitaliskov.com
 sidebar:
   - 
-    category: animation 
-  - 
-    category: pictures
-    class: calendar
+    category: narrative-films
+  -
+    category: music-video
+  -
+    category: abstract-films
+  # - 
+  #   category: pictures
+  #   class: calendar
   - 
     category: contacts
   -
