@@ -16,7 +16,6 @@ function CategoryViewWrapper() {
 
     this.openLastCategory = function() {
         var lastCategory = this.items[this.items.length - 1];
-        // actually this isn't last category because last is the signle row
         lastCategory && lastCategory.doClick();
     }
 }
