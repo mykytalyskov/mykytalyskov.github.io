@@ -10,7 +10,7 @@ logo: /pictures/logos/Head-blink.gif
 email: nikitaliskov@gmail.com
 url: http://nikitaliskov.com
 sidebar:
-  - 
+  -
     category: narrative-films
   -
     category: music-video
@@ -19,10 +19,12 @@ sidebar:
   # - 
   #   category: pictures
   #   class: calendar
-  - 
+  -
+    category: articles
+  -
     category: contacts
   -
-    category: about
+    category: curriculum-vitae
 exclude:
   - old
   - bak

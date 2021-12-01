@@ -37,12 +37,12 @@
             <!-- to mark the link set class to 'active' -->
             <!-- add 'float: left' to get rid of extra space between inline-block items  -->
             <li class="{{ class }}" style="{{ item_style }}">
-                <a id="{{ j }}" href="{{ post.external_url }}" target="blank"><i><span>{{ post.title | downcase }}</span></i></a>
+                <a id="{{ j }}" href="{{ post.external_url }}" target="blank"><i><span>{{ post.title | downcase | truncate: 20 }}</span></i></a>
             </li>
         {% else %}
             <!-- to mark the link set class to 'active' -->
             <li class="{{ class }}" style="{{ item_style }}" data-selectable="true">
-                <a id="{{ j }}" href="{{ post.url }}"><i><span>{{ post.title }}</span></i></a>
+                <a id="{{ j }}" href="{{ post.url }}"><i><span>{{ post.title | truncate: 20 }}</span></i></a>
             </li>
         {% endif %}
         
