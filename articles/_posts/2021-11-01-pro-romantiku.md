@@ -1,6 +1,7 @@
 ---
 layout: main
-title: "ПРО РОМАНТИКУ ДНІПРА, ГОЛОВУ ЛЕНІНА ТА СЮРРЕАЛІЗМ"
+title: "Романтика"
+external_url: https://donttakefake.com/rezhiser-kohannya-mikita-liskov-pro-romantiku-dnipra-golovu-lenina-ta-syurrealizm/
 published: true
 comments: false
 ---

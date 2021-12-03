@@ -1,6 +1,7 @@
 ---
 layout: main
-title: "Те, що я називаю абсурдом – це тип особистості"
+title: "Абсурд"
+external_url: https://m.day.kyiv.ua/uk/article/kultura/te-shcho-ya-nazyvayu-absurdom-ce-typ-osobystosti
 published: true
 comments: false
 ---

@@ -1,6 +1,7 @@
 ---
 layout: main
-title: "Про мультяшну реальність Дніпра"
+title: "Реальність"
+external_url: https://soundcloud.app.goo.gl/5FB3e
 published: true
 comments: false
 ---

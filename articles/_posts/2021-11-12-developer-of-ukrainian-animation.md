@@ -1,6 +1,7 @@
 ---
 layout: main
-title: "The Developer of Ukrainian Animation"
+title: "Developer"
+external_url: https://cinesud.nl/nieuws-inspiratie/2019/mykyta-lyskov-the-developer-of-ukrainian-animation
 published: true
 comments: false
 ---

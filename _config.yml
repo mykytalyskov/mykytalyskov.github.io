@@ -24,7 +24,7 @@ sidebar:
   -
     category: contacts
   -
-    category: curriculum-vitae
+    category: cv
 exclude:
   - old
   - bak
