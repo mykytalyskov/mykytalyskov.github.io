@@ -164,6 +164,7 @@ a, a:hover, a:focus {
 .bs-docs-sidebar .nav>li>a {
     padding: 0px;
     font-weight: 500;
+    width: 100%;
 }
 
 .bs-docs-sidebar .nav>li>a:hover {
