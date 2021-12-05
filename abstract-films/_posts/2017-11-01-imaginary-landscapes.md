@@ -1,11 +1,12 @@
 ---
 layout: main
-title: "Imaginary Landscapes"
+title: Imaginary Landscapes
+title_full: "Imaginary Landscapes (trailer)"
 description: |
-    Imaginary Landscapes  
-    trailer
-    abstract movie about origin of movement.
-    2020
+    Sometimes lines become a landscape
+    Gouache on paper
+    Sound and animation by: Mykyta Lyskov (Nikita Liskov)
+    2021
 media_url: https://player.vimeo.com/video/469273219
 published: true
 comments: false
