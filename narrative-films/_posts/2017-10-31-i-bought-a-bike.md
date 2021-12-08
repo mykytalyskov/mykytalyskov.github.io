@@ -2,7 +2,7 @@
 layout: main
 title: I bought a bike
 description: |
-    Four sityations about my life
+    Four situations about my life
     2D digital animation
     Sound and animation by: Mykyta Lyskov (Nikita Liskov)
     2016
