@@ -7,7 +7,7 @@ description: |
     Gouache on paper
     Sound and animation by: Mykyta Lyskov (Nikita Liskov)
     2021
-media_url: https://player.vimeo.com/video/469273219
+media_url: https://player.vimeo.com/video/654898546
 published: true
 comments: false
 ---
