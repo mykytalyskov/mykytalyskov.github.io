@@ -18,6 +18,8 @@ sidebar:
     category: abstract-films
   -
     category: student-films
+  -
+    category: other-films
   # - 
   #   category: pictures
   #   class: calendar
