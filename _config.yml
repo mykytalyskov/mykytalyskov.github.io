@@ -36,7 +36,7 @@ exclude:
 # not used
 lang:
   - en
-  - ru
+  - uk
 
 gems:
   - jekyll-seo-tag
