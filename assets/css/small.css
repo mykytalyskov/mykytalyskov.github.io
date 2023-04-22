@@ -15,7 +15,7 @@ and (min-resolution: 190dpi) {
 
   /* fit media horizontally */
   #content .media img, #content .media iframe {
-	max-width: 100%;
+	max-width: 50%; /* make image smaller */
 	max-height: 100%;
 	min-width: 100%;
   }
