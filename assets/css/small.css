@@ -46,7 +46,9 @@ and (orientation: landscape) {
     min-width: unset;
   }
 
+  /* Make image same size as video (iframe) */
   /* Exclusively for There's That Grin */
+  #content .media img,
   #content .media.animation img {
     width: 500px;
   }
