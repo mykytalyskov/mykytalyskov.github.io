@@ -2,7 +2,7 @@
 layout: main
 title: "Абсурд"
 external_url: https://m.day.kyiv.ua/uk/article/kultura/te-shcho-ya-nazyvayu-absurdom-ce-typ-osobystosti
-published: true
+published: false
 comments: false
 ---
 
